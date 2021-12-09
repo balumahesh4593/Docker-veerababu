@@ -140,5 +140,33 @@ docker run -it --name veerudemy -v /home/ec2-user:/babuu ubuntu /bin/bash     co
 
 docker inspect veerudemy(container name)                   to see the total information of veerudemy container
 
+docker run -td --name webserver -p 80:80 ubuntu            create the webserver container and the port 80:80
 
+docker means application
+run means create a container
+-t means terminal
+-d dettach
+webserver menas container name
+-p means portnumber 80:80 first 80 is host ip it will change and second 80 is container ip it will not be change 
+ubuntu is a image
 
+docker exec -it webserver /bin/bash
+
+apt-get update -y
+apt-get install apache2 -y
+
+cd /var/www/html
+
+echo "hi docker this is veerababu" > index.html
+echo "hi docker this is praveen" > babu.html
+
+ls 
+index.html   babu.html   files are seen
+
+service apache2 start       the apache2 service will be started
+
+take the public ip and put it down to web search bar
+3.110.187.243
+Hi docker this is veerababu
+3.110.187.243/babu.html
+hi docker this is praveen
