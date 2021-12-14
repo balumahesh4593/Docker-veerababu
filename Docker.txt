@@ -118,6 +118,7 @@ hi veerababu
 echo $myname
 veerababu
 
+=== To create a Volume
 vi Dockerfile
 FROM ubuntu
 VOLUME ["/data"]
